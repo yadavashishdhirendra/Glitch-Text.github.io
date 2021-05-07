@@ -11,8 +11,9 @@
 </head>
 
 <body>
-	<audio autoplay loop="true">
-		<source src="WhatsApp Audio 2021-05-07 at 10.43.11.mpeg" type="audio/mpeg">
+	<audio id="audio" controls="" style="display: none;">
+		<source src="WhatsApp Audio 2021-05-07 at 10.43.11.mpeg" type="audio/mpeg">Please update your browser does not
+		support the audio element.
 	</audio>
 	<div class="container">
 		<h1>
@@ -30,6 +31,16 @@
 			<span style="font-size: 2rem;color: red;">&hearts;</span>
 		</h1>
 	</div>
+
+	<script type="text/javascript">
+		function autoplay() {
+			var r = confirm("Would You Like To AutoPlay Music?");
+			if (r == true) {
+				document.getElementById("audio").play();
+			}
+		}
+	</script>
+	<script>autoplay();</script>
 </body>
 
 </html>
